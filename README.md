@@ -1,20 +1,16 @@
 ## [Python Tutor](http://pythontutor.com/)
-
-## (Prerequisites)
-- **Python 3.x** 
+   http://pythontutor.com/
 
 ## Installation
-
-1. **โคลนโปรเจกต์นี้ลงมาที่เครื่อง:**
+1. **clone:**
    ```bash
-   git clone 
+   git clone https://github.com/djuzee3867/local-python-tutor.git 
    cd local-python-tutor
    ```
 2. install bottle
    ```bash
    pip install bottle
    ```
-
 ## run
 
    ```bash
