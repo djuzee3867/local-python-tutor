@@ -4,7 +4,7 @@
 ## Installation
 1. **clone:**
    ```bash
-   git clone https://github.com/djuzee3867/local-python-tutor.git 
+   git clone https://github.com/djuzee3867/local-python-tutor
    cd local-python-tutor
    ```
 2. install bottle
