@@ -1,0 +1,183 @@
+/* Modern Premium Light Theme for Python Tutor */
+
+:root {
+  --primary: #0050ff;
+  --primary-hover: #003cc8;
+  --secondary: #0ea5e9;
+  --bg-color: #f8fafc;
+  --panel-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --radius: 12px;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: var(--text-main) !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header & Typography */
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+.dashboard-title {
+  margin: 0;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 3rem !important;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -1px;
+}
+
+.dashboard-title .badge {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  vertical-align: super;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Layout Main */
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Panels */
+.panel {
+  background: var(--panel-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius) !important;
+  padding: 2rem;
+  box-shadow: var(--shadow-md) !important;
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 auto !important; /* Override old margin */
+}
+
+.panel:hover {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+#pyOutputPane {
+  max-width: 1000px !important;
+}
+
+/* Code Input Area */
+#codeInputPane {
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02) !important;
+}
+
+/* Select Dropdown */
+.modern-select {
+  appearance: none;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+.modern-select:hover {
+  border-color: var(--primary);
+}
+.modern-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 80, 255, 0.2);
+}
+
+/* Buttons */
+.action-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+button.bigBtn {
+  cursor: pointer;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+  color: #fff !important;
+  padding: 0.8rem 2rem !important;
+  border: none !important;
+  border-radius: 30px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(0, 80, 255, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button.bigBtn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 80, 255, 0.5) !important;
+}
+
+button.bigBtn:active {
+  transform: translateY(1px);
+}
+
+/* Utilities & Legacy Support */
+#frontendErrorOutput {
+  color: #ef4444 !important;
+  font-weight: 500 !important;
+  margin-top: 1rem !important;
+  background: #fef2f2 !important;
+  padding: 0.5rem !important;
+  border-radius: 6px !important;
+  border-left: 4px solid #ef4444 !important;
+}
+
+/* Ensure syntax bubble is readable in light mode */
+.qtip-content {
+  color: #333 !important;
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Hide old s4 gap */
+.s4 { height: 0 !important; display: none !important; }

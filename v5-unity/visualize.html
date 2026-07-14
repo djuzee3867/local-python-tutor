@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+  Python Tutor: https://github.com/pgbovine/OnlinePythonTutor/
+  Copyright (C) Philip Guo (philip@pgbovine.net)
+  LICENSE: https://github.com/pgbovine/OnlinePythonTutor/blob/master/LICENSE.txt
+-->
+
+<head>
+  <title>Visualize Python</title>
+
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="build/visualize.bundle.js?ef8faad903" charset="utf-8"></script>
+
+</head>
+
+<body>
+<div class="s4"></div>
+
+<div class="title-container">
+  <!-- <h3 class="eyebrow">Visualize your Algorithms</h3>
+  <h1 class="dashboard-title">Pathrise Python Code Visualizer</h1> -->
+</div>
+
+<div id="pyInputPane">
+
+<div id="codeInputWarnings">
+
+  <select id="pythonVersionSelector">
+    <option value="3" selected>Python</option>
+    <!-- <option value="2">Python 2.7</option>
+    <option value="py3anaconda">Python 3.6 with Anaconda (experimental)</option>
+    <option value="java">Java 8</option>
+    <option value="c">C (gcc 4.8, C11)</option>
+    <option value="cpp">C++ (gcc 4.8, C++11)</option>
+    <option value="js">JavaScript ES6</option>
+    <option value="ts">TypeScript 1.4</option>
+    <option value="ruby">Ruby 2.2</option> -->
+  </select>
+
+</div>
+
+<div id="codeInputPane"></div>
+<div id="frontendErrorOutput"></div>
+
+<p>
+<button id="executeBtn" class="bigBtn" type="button">Visualize Execution</button>
+<!-- <button style="margin-left: 20px;" id="liveModeBtn" class="bigBtn" type="button">Live Programming Mode</button> -->
+</p>
+
+
+</div>
+
+<!-- <div id="output-container"> -->
+<div id="pyOutputPane"></div>
+<!-- </div> -->
+
+<div id="chat_div"></div>
+
+<script type="text/javascript">
+  // Add a global click handler for the "Edit this code" button
+  // since visualize.js doesn't handle it natively like index.js does.
+  $(document).on('click', '#editBtn', function(e) {
+    e.preventDefault();
+    $('#pyOutputPane').empty();
+    $('#executeBtn').html("Visualize Execution").attr('disabled', false);
+  });
+</script>
+
+</body>
+</html>
