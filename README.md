@@ -23,6 +23,11 @@
    ```
   
    ```text
-   http:// <---IP---\> :5000/visualize.html
+   http:// <---IP---> :5000/
+
+   http:// <---IP---> :5000/index.html
+   
+   http:// <---IP---> :5000/visualize.html
+
    http://localhost:5000/visualize.html
    ```
