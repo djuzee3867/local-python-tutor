@@ -11,7 +11,7 @@
 # easy_install pip
 # pip install bottle
 
-from bottle import route, get, request, run, template, static_file
+from bottle import route, get, request, run, template, static_file, redirect
 try:
     import StringIO # NB: don't use cStringIO since it doesn't support unicode!!!
 except:
@@ -30,6 +30,11 @@ import os
 @route('/error_log.py')
 def dummy_ok(name=None):
     return 'OK'
+
+@route('/')
+@route('/index.html')
+def root_redirect():
+    redirect('/visualize.html')
 
 @route('/<filepath:path>')
 def index(filepath):
